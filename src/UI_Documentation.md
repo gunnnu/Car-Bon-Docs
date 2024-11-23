@@ -6,16 +6,17 @@ This project is a web application built using React and TypeScript, featuring a 
 
 ## Table of Contents
 
-1. [Technologies Used](#technologies-used)
-2. [Installation](#installation)
-3. [Project Structure](#project-structure)
-4. [Components](#components)
-5. [Routing](#routing)
-6. [Theming](#theming)
-7. [Styling](#styling)
-8. [Usage](#usage)
-9. [Contributing](#contributing)
-10. [License](#license)
+- [Project Documentation](#project-documentation)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Technologies Used](#technologies-used)
+  - [Installation](#installation)
+  - [Project Structure](#project-structure)
+  - [Components](#components)
+  - [Routing](#routing)
+  - [Theming](#theming)
+  - [Styling](#styling)
+  - [Usage](#usage)
 
 ## Technologies Used
 
@@ -32,61 +33,193 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone <repository-url>
+   cd <repository-directory>
    ```
 
 2. Install the dependencies:
 
    ```bash
    npm install
-   Start the development server:
    ```
+   Start the development server:
 
    ```bash
-   npm start
-   Open your browser and navigate to http://localhost:3000 to view the application.
+   npm run dev
    ```
+   Open your browser and navigate to http://localhost:6714 to view the application.
 
 ## Project Structure
 The project is organized into the following structure:
 
    ```
-   /your-repo-name
-   │
-   ├── /public                # Public assets
-   │   └── index.html        # Main HTML file
-   │
-   ├── /src                   # Source files
-   │   ├── /assets            # Static assets (e.g., images, logos)
-   │   ├── /components        # Reusable components (e.g., Footer)
-   │   ├── /hooks             # Custom hooks (e.g., useTheme)
-   │   ├── /pages             # Page components for routing
-   │   ├── /styles            # Global styles (if any)
-   │   └── index.tsx         # Entry point of the application
-   │
-   ├── package.json           # Project metadata and dependencies
-   └── tsconfig.json          # TypeScript configuration
+   /car-bon-ui
+   ┣ Docs/
+   ┃ ┗ UI_Documentation.md
+   ┣ public/
+   ┃ ┣ car-bon-favicon.svg
+   ┃ ┣ car-bon-icon-glow.svg
+   ┃ ┣ car-bon-icon.svg
+   ┃ ┣ car-bon-logo.svg
+   ┃ ┣ splash.png
+   ┃ ┗ vite.svg
+   ┣ src/
+   ┃ ┣ Contexts/
+   ┃ ┃ ┗ UserContext.ts
+   ┃ ┣ assets/
+   ┃ ┃ ┣ car-bon-favicon.svg
+   ┃ ┃ ┣ car-bon-icon.svg
+   ┃ ┃ ┣ car-bon-logo.svg
+   ┃ ┃ ┗ react.svg
+   ┃ ┣ components/
+   ┃ ┃ ┣ Charts/
+   ┃ ┃ ┃ ┣ bar_chart.tsx
+   ┃ ┃ ┃ ┗ line_chart.tsx
+   ┃ ┃ ┣ Loader/
+   ┃ ┃ ┃ ┗ Loader.tsx
+   ┃ ┃ ┣ Pagination_wrapper/
+   ┃ ┃ ┃ ┗ pagination.tsx
+   ┃ ┃ ┣ PanelLayout/
+   ┃ ┃ ┃ ┣ Layout.tsx
+   ┃ ┃ ┃ ┣ PanelLayout.tsx
+   ┃ ┃ ┃ ┣ collapsible_menu_button.tsx
+   ┃ ┃ ┃ ┣ content_layout.tsx
+   ┃ ┃ ┃ ┣ footer.tsx
+   ┃ ┃ ┃ ┣ menu.tsx
+   ┃ ┃ ┃ ┣ navbar.tsx
+   ┃ ┃ ┃ ┣ sheet-menu.tsx
+   ┃ ┃ ┃ ┣ sidebar.tsx
+   ┃ ┃ ┃ ┣ sidebarToggle.tsx
+   ┃ ┃ ┃ ┗ user-nav.tsx
+   ┃ ┃ ┣ SelectBox/
+   ┃ ┃ ┃ ┗ selectBoxComponent.tsx
+   ┃ ┃ ┣ collapsible/
+   ┃ ┃ ┃ ┗ Collapsible.tsx
+   ┃ ┃ ┣ custom/
+   ┃ ┃ ┃ ┗ kpi.tsx
+   ┃ ┃ ┣ data-fetcher/
+   ┃ ┃ ┃ ┗ DataFetcher.tsx
+   ┃ ┃ ┣ hamburger-menu/
+   ┃ ┃ ┃ ┗ HamburgerMenu.tsx
+   ┃ ┃ ┣ menubar/
+   ┃ ┃ ┃ ┗ Menubar.tsx
+   ┃ ┃ ┣ phone-number-picker/
+   ┃ ┃ ┃ ┗ PhoneNumberPicker.jsx
+   ┃ ┃ ┣ rsuite/
+   ┃ ┃ ┃ ┣ charts/
+   ┃ ┃ ┃ ┃ ┗ Charts.tsx
+   ┃ ┃ ┃ ┗ date-picker/
+   ┃ ┃ ┃   ┗ DatePicker.tsx
+   ┃ ┃ ┣ sidebar/
+   ┃ ┃ ┃ ┣ CustomSidebar.tsx
+   ┃ ┃ ┃ ┗ Navbar.tsx
+   ┃ ┃ ┣ theme-toggle/
+   ┃ ┃ ┃ ┗ ThemeToggle.tsx
+   ┃ ┃ ┣ ui/
+   ┃ ┃ ┃ ┣ avatar.tsx
+   ┃ ┃ ┃ ┣ breadcrumb.tsx
+   ┃ ┃ ┃ ┣ button.tsx
+   ┃ ┃ ┃ ┣ card.tsx
+   ┃ ┃ ┃ ┣ chart.tsx
+   ┃ ┃ ┃ ┣ collapsible.tsx
+   ┃ ┃ ┃ ┣ dropdown-menu.tsx
+   ┃ ┃ ┃ ┣ menubar.tsx
+   ┃ ┃ ┃ ┣ pagination.tsx
+   ┃ ┃ ┃ ┣ resizable.tsx
+   ┃ ┃ ┃ ┣ scroll-area.tsx
+   ┃ ┃ ┃ ┣ select.tsx
+   ┃ ┃ ┃ ┣ separator.tsx
+   ┃ ┃ ┃ ┣ sheet.tsx
+   ┃ ┃ ┃ ┣ skeleton.tsx
+   ┃ ┃ ┃ ┗ tooltip.tsx
+   ┃ ┃ ┣ user-manager/
+   ┃ ┃ ┃ ┗ UserManager.tsx
+   ┃ ┃ ┗ theme-provider.tsx
+   ┃ ┣ config/
+   ┃ ┃ ┗ menu.json
+   ┃ ┣ lib/
+   ┃ ┃ ┣ Encryption.ts
+   ┃ ┃ ┣ menu-list.ts
+   ┃ ┃ ┗ utils.ts
+   ┃ ┣ pages/
+   ┃ ┃ ┣ ClerkAuth.tsx
+   ┃ ┃ ┣ ClerkDefault.tsx
+   ┃ ┃ ┣ ClerkLogin.tsx
+   ┃ ┃ ┣ Dashboard.tsx
+   ┃ ┃ ┣ DeviceList.tsx
+   ┃ ┃ ┣ Devices.tsx
+   ┃ ┃ ┣ Home.tsx
+   ┃ ┃ ┣ Landing.tsx
+   ┃ ┃ ┣ Layout.tsx
+   ┃ ┃ ┣ Login.tsx
+   ┃ ┃ ┣ Logout.tsx
+   ┃ ┃ ┗ Register.tsx
+   ┃ ┣ providers/
+   ┃ ┃ ┗ AuthProvider/
+   ┃ ┃   ┗ auth.tsx
+   ┃ ┣ routes/
+   ┃ ┃ ┣ Breadcrumbs.tsx
+   ┃ ┃ ┣ ProtectedRoute.tsx
+   ┃ ┃ ┗ index.tsx
+   ┃ ┣ types/
+   ┃ ┃ ┣ UserDetails.ts
+   ┃ ┃ ┗ date_range_type.ts
+   ┃ ┣ App.css
+   ┃ ┣ App.tsx
+   ┃ ┣ index.css
+   ┃ ┣ main.tsx
+   ┃ ┗ vite-env.d.ts
+   ┣ .env
+   ┣ .eslintrc.cjs
+   ┣ .gitignore
+   ┣ README.md
+   ┣ capacitor.config.ts
+   ┣ components.json
+   ┣ deploy_ui.sh
+   ┣ global.d.ts
+   ┣ index.html
+   ┣ package.json
+   ┣ postcss.config.js
+   ┣ tailwind.config.js
+   ┣ tsconfig.app.json
+   ┣ tsconfig.json
+   ┣ tsconfig.node.json
+   ┣ vite.config.ts
+   ┗ webpack.config.js
    ```
 
 ## Components
 The application consists of several reusable components, including:
 
-**Footer**: Displays the application logo and navigation links.  
-**Header**: (if applicable) Displays the application title and navigation.  
+**Charts** : The Component that renders charts
+**Loader** : The Component that rendersa loader animation
+**Pagination_wrapper** : A wrapper over ShadCN Ui Components to modify and customize the pagination component
+**PanelLayout** : A generic component for rendering the layout of the Application
+**SelectBox** : A wrapper component over ShadCn Dropdown Select Box component
+**collapsible** : A Custom component for Sidebar
+**custom** : some cutom components like KPI metrics
+**data-fetcher** : the main component which fetches data from API.
+**hamburger-menu** : Hamburger menu to trigger opening and closing of Sidebar.
+**rsuite** : wrappers for generic components from rsuite.
+**theme-toggle** : Theme toggle component.
+**ui** : Generic Shad Cn UI components.
+**theme-provider.tsx** : Theme provider base context component.
 **Other Page Components**: Various components representing different pages in the application (e.g., Home, Dashboard, Account).  
 
 ## Routing
 The application uses React Router for client-side routing. The main routes typically include:
 
 *  `/`: The root route, which renders the Home page.
-*   `/dashboard`: The dashboard route, which renders the Dashboard page.
-* `/account`: The Account route, which renders the Account management page
+*  `/dashboard`: The dashboard route, which renders the Dashboard page.
+*  `/account`: The Account route, which renders the Account management page
+*  `/login`: Page for Login (Clerk Login Route)
+*  `/register`: Page for Register (Clerk Register Route)
+*  `/devices`: Page for user Devices and current metrics.
 
-Routes are defined in the main application file (e.g., index.tsx or App.tsx).
+Routes are defined in the routes index file (`routes/index.tsx`).
 
 ## Theming
-The application supports light and dark themes. The theme can be toggled using a custom hook (useTheme), which provides the current theme context to components. The components adjust their styles based on the selected theme.
+The application supports light and dark themes. The theme can be toggled using the `theme-toggle` component, which provides the current theme context to components. The components adjust their styles based on the selected theme.
 
 ## Styling
 The project uses Tailwind CSS for styling. This utility-first CSS framework allows for rapid styling directly within the JSX code. Custom styles can also be added as needed.

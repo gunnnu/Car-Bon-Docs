@@ -6,15 +6,19 @@ This documentation provides an overview of the FastAPI application located in th
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Project Structure](#project-structure)
-- [API Endpoints](#api-endpoints)
-  - [Users](#users)
-  - [Items](#items)
-- [Running the Application](#running-the-application)
-- [Testing](#testing)
-- [Contributing](#contributing)
-- [License](#license)
+- [API Documentation](#api-documentation)
+  - [Overview](#overview)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Project Structure](#project-structure)
+  - [API Endpoints](#api-endpoints)
+    - [Users](#users)
+      - [Create User](#create-user)
+      - [Get User](#get-user)
+    - [Items](#items)
+      - [Create Item](#create-item)
+      - [Get Item](#get-item)
+  - [Running the Application](#running-the-application)
 
 ## Installation
 
@@ -44,21 +48,45 @@ To activate the virtual environment created by Poetry, use:
     ```
 This command will activate the virtual environment.
 
-4. Project Structure
+## Project Structure
 
 The project structure of the FastAPI application is as follows:
     ```
 
-    src/
-    └── API/
-        ├── main.py           # Entry point for the FastAPI application
-        ├── models.py         # Database models
-        ├── schemas.py        # Pydantic schemas for data validation
-        ├── routes/           # Directory containing API route definitions
-        │   ├── __init__.py
-        │   ├── users.py      # User-related endpoints
-        │   └── items.py      # Item-related endpoints
-        └── database.py       # Database connection and configuration
+    /API
+    ┣ .vscode/
+    ┃ ┣ launch.json
+    ┃ ┗ settings.json
+    ┣ Docs/
+    ┃ ┗ API_Documentation.md
+    ┣ __pycache__/
+    ┃ ┣ __init__.cpython-39.pyc
+    ┃ ┗ index.cpython-39.pyc
+    ┣ app/
+    ┃ ┣ data/
+    ┃ ┃ ┗ voice_responses/
+    ┃ ┃   ┣ runtime_reponse.xml
+    ┃ ┃   ┗ runtime_response.xml
+    ┃ ┣ helpers/
+    ┃ ┃ ┣ __init__.py
+    ┃ ┃ ┗ get_version.py
+    ┃ ┣ services/
+    ┃ ┃ ┣ __init__.py
+    ┃ ┃ ┣ dynamo.py
+    ┃ ┃ ┣ graph_service.py
+    ┃ ┃ ┣ secret_manager.py
+    ┃ ┃ ┣ twilio_service.py
+    ┃ ┃ ┗ user_service.py
+    ┃ ┣ __init__.py
+    ┃ ┣ app_version
+    ┃ ┗ index.py
+    ┣ Dockerfile
+    ┣ __init__.py
+    ┣ deploy.sh
+    ┣ open_api_spec.json
+    ┣ poetry.lock
+    ┣ pyproject.toml
+    ┗ requirements.txt
     ```
 ## API Endpoints
 
