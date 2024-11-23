@@ -191,19 +191,19 @@ The project is organized into the following structure:
 ## Components
 The application consists of several reusable components, including:
 
-**Charts** : The Component that renders charts
-**Loader** : The Component that rendersa loader animation
-**Pagination_wrapper** : A wrapper over ShadCN Ui Components to modify and customize the pagination component
-**PanelLayout** : A generic component for rendering the layout of the Application
-**SelectBox** : A wrapper component over ShadCn Dropdown Select Box component
-**collapsible** : A Custom component for Sidebar
-**custom** : some cutom components like KPI metrics
-**data-fetcher** : the main component which fetches data from API.
-**hamburger-menu** : Hamburger menu to trigger opening and closing of Sidebar.
-**rsuite** : wrappers for generic components from rsuite.
-**theme-toggle** : Theme toggle component.
-**ui** : Generic Shad Cn UI components.
-**theme-provider.tsx** : Theme provider base context component.
+**Charts** : The Component that renders charts  
+**Loader** : The Component that rendersa loader animation  
+**Pagination_wrapper** : A wrapper over ShadCN Ui Components to modify and customize the pagination component  
+**PanelLayout** : A generic component for rendering the layout of the Application  
+**SelectBox** : A wrapper component over ShadCn Dropdown Select Box component  
+**collapsible** : A Custom component for Sidebar  
+**custom** : some cutom components like KPI metrics  
+**data-fetcher** : the main component which fetches data from API.  
+**hamburger-menu** : Hamburger menu to trigger opening and closing of Sidebar.  
+**rsuite** : wrappers for generic components from rsuite.  
+**theme-toggle** : Theme toggle component.  
+**ui** : Generic Shad Cn UI components.  
+**theme-provider.tsx** : Theme provider base context component.  
 **Other Page Components**: Various components representing different pages in the application (e.g., Home, Dashboard, Account).  
 
 ## Routing
