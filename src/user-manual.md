@@ -114,5 +114,3 @@ A: Follow the manufacturer's instructions for resetting the device, usually foun
 If you have any questions or need assistance, please reach out to our support team:
 
 - **Email**: support@car-bon.eco
-
-<iframe src="https://scribehow.com/embed/Accessing_the_Car-Bon_Dashboard_and_Managing_Devices__4LipqmLYQ8qygdfFgpXZqQ?as=video" width="100%" height="640" allowfullscreen frameborder="0"></iframe>

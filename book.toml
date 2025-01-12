@@ -7,3 +7,7 @@ title = "Car-Bon Docs"
 
 [output.html]
 site-url = "/Car-Bon-Docs/"
+
+[preprocessor.toc]
+marker = "[[_TOC_]]"
+max-level = 4
