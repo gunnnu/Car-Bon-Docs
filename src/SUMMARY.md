@@ -4,6 +4,7 @@
   -  [Login](./Step-By-Step-Guide/login.md)
   -  [Dashboard](./Step-By-Step-Guide/Dashboard.md)
   -  [Devices](./Step-By-Step-Guide/devices.md)
+  -  [Maps and other views](./Step-By-Step-Guide/Views.md)
   -  [Manage Account](./Step-By-Step-Guide/manage-account.md)
   -  [Sidebar Navigation](./Step-By-Step-Guide/Sidebar-navigation.md)
   -  [Footer Navigation](./Step-By-Step-Guide/footer-navigation.md)
@@ -11,3 +12,4 @@
   -  [Mobile Walkthrough](./Step-By-Step-Guide/mobile.md)
 - [API Documentation](API_Documentation.md)
 - [UI Documentation](UI_Documentation.md)
+- [Hardware Documentation](Sim7600-QMI.md)
